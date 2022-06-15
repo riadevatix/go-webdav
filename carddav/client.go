@@ -2,6 +2,7 @@ package carddav
 
 import (
 	"bytes"
+	"encoding/xml"
 	"fmt"
 	"mime"
 	"net"
@@ -496,4 +497,19 @@ func (c *Client) SyncCollection(path string, query *SyncQuery) (*SyncResponse, e
 	}
 
 	return ret, nil
+}
+
+func (c *Client) GetAllAddressPaths(path string) ([]string, error) {
+	pf := internal.NewPropNamePropFind(xml.Name{Local: "getetag"})
+	ms, err := c.ic.PropFind(path, internal.DepthOne, pf)
+	if err != nil {
+		return nil, err
+	}
+	var urls []string
+	for _, resp := range ms.Responses {
+		for _, url := range resp.Hrefs {
+			urls = append(urls, url.String())
+		}
+	}
+	return urls, nil
 }
