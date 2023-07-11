@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/emersion/go-vcard"
-	"github.com/emersion/go-webdav"
-	"github.com/emersion/go-webdav/internal"
+	"github.com/riadevatix/go-webdav"
+	"github.com/riadevatix/go-webdav/internal"
 )
 
 func NewAddressBookHomeSet(path string) webdav.BackendSuppliedHomeSet {
@@ -107,14 +107,14 @@ type AddressObject struct {
 	Card          vcard.Card
 }
 
-//SyncQuery is the query struct represents a sync-collection request
+// SyncQuery is the query struct represents a sync-collection request
 type SyncQuery struct {
 	DataRequest AddressDataRequest
 	SyncToken   string
 	Limit       int // <= 0 means unlimited
 }
 
-//SyncResponse contains the returned sync-token for next time
+// SyncResponse contains the returned sync-token for next time
 type SyncResponse struct {
 	SyncToken string
 	Updated   []AddressObject

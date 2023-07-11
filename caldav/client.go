@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/emersion/go-ical"
-	"github.com/emersion/go-webdav"
-	"github.com/emersion/go-webdav/internal"
+	"github.com/riadevatix/go-webdav"
+	"github.com/riadevatix/go-webdav/internal"
 )
 
 // Client provides access to a remote CardDAV server.

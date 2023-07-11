@@ -1,6 +1,6 @@
 # go-webdav
 
-[![godocs.io](https://godocs.io/github.com/emersion/go-webdav?status.svg)](https://godocs.io/github.com/emersion/go-webdav)
+[![godocs.io](https://godocs.io/github.com/riadevatix/go-webdav?status.svg)](https://godocs.io/github.com/riadevatix/go-webdav)
 [![builds.sr.ht status](https://builds.sr.ht/~emersion/go-webdav/commits/master.svg)](https://builds.sr.ht/~emersion/go-webdav/commits/master?)
 
 A Go library for [WebDAV], [CalDAV] and [CardDAV].

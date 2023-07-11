@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/emersion/go-vcard"
-	"github.com/emersion/go-webdav"
-	"github.com/emersion/go-webdav/internal"
+	"github.com/riadevatix/go-webdav"
+	"github.com/riadevatix/go-webdav/internal"
 )
 
 // Discover performs a DNS-based CardDAV service discovery as described in
